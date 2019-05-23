@@ -7,8 +7,8 @@
   </tr>
 
   <tr *ngFor="let comment of comments" (click)="selectComment(comment)" [class.selected]="comment === selectedComment">
-    <td>{{ comment.id }}</td>
-    <td>{{ comment.postId }}</td>
+    <td class="text-center">{{ comment.id }}</td>
+    <td class="text-center">{{ comment.postId }}</td>
     <td>{{ comment.name }}</td>
     <td>{{ comment.email }}</td>
   </tr>

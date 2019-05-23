@@ -1,6 +1,6 @@
 <div>
-  <input [(ngModel)]="currentValue" />
-</div>
-<div>
-  {{ currentValue }}
+  <input 
+    [(ngModel)]="currentValue" 
+    (ngModelChange)="search()"
+    placeholder="search in table"/>
 </div>

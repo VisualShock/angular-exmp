@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Comment } from '../models/comment';
 
 @Component({
@@ -8,6 +8,10 @@ import { Comment } from '../models/comment';
 })
 export class ModalComponent implements OnInit {
 
+  someValue = 'value from component';
+
+  @Output() closeEvent = new EventEmitter();
+
   @Input() comment: Comment;
 
   constructor() { }
@@ -16,4 +20,12 @@ export class ModalComponent implements OnInit {
     console.log(this.comment);
   }
 
+  close() {
+    this.comment = null;
+    this.closeEvent.emit();
+  }
+
+  onSomeEvent() {
+    console.log('someEvent called');
+  }
 }

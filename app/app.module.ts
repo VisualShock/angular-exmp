@@ -10,6 +10,7 @@ import { TableComponent } from './table/table.component';
 import { ControllerComponent } from './controller/controller.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { ModalComponent } from './modal/modal.component';
+import { StopPropagationDirective } from './stop-propagation.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ModalComponent } from './modal/modal.component';
     TableComponent,
     ControllerComponent,
     ToolbarComponent,
-    ModalComponent
+    ModalComponent,
+    StopPropagationDirective
   ],
   imports: [
     BrowserModule,

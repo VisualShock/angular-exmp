@@ -1,3 +1,29 @@
-div {
+table {
+    width: 100%;
+    font-size: 14px;
+}
 
+td,th {
+    background: #eed;
+    padding: 5px;
+}
+
+th {
+    background: #ede;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.selected td {
+    background: #fed;
+}
+
+td {
+    cursor: pointer;
+}
+
+tr:hover td {
+    background: #fed;
 }

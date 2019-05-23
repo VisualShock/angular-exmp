@@ -1,7 +1,10 @@
-<app-toolbar></app-toolbar>
+  <div>
+    <app-toolbar (searchEvent)="onSearch($event)"></app-toolbar>
 
-<app-modal [comment]="selectedComment"></app-modal>
+    <app-modal [comment]="selectedComment" (closeEvent)="unselectComment()" (someEvent)="onSomeEvent()"></app-modal>
 
-<div>
-  <app-table (commentSelectEvent)="onCommentSelect($event)" [comments]="defaultComments"></app-table>
+    <app-table 
+        (commentSelectEvent)="onCommentSelect($event)" 
+        [comments]="filteredComment"
+        [selectedComment]="selectedComment"></app-table>
 </div>
